@@ -2,7 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 
 import AuthUserContext from "./context"
-import { withFirebase } from "../Firebase"
+import { withFirebase } from "../firebase"
 import SignIn from "../formComponents/SignIn"
 import SignUp from "../formComponents/SignUp"
 

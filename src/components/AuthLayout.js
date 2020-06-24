@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import getFirebase, { FirebaseContext } from './Firebase';
+import getFirebase, { FirebaseContext } from './firebase';
 import withAuthentication from './session/withAuthentication';
 
 class AuthLayout extends Component {
