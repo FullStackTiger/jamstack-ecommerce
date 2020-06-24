@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby JAMstack ECommerce Professional`,
@@ -44,20 +48,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        credentials: {
-          apiKey: "AIzaSyAZywm8YqLjbsLBDH1TMrp757N_gkmsU6E",
-          authDomain: "jamstack-ecommerce-c96f3.firebaseapp.com",
-          databaseURL: "https://jamstack-ecommerce-c96f3.firebaseio.com",
-          projectId: "jamstack-ecommerce-c96f3",
-          storageBucket: "jamstack-ecommerce-c96f3.appspot.com",
-          messagingSenderId: "204579730778",
-          appId: "1:204579730778:web:3ff1ea76ca1cd298e4ef63"
-        }
-      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
