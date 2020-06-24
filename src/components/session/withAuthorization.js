@@ -5,6 +5,7 @@ import AuthUserContext from "./context"
 import { withFirebase } from "../firebase"
 import SignIn from "../formComponents/SignIn"
 import SignUp from "../formComponents/SignUp"
+import PasswordForgetForm from "../formComponents/PasswordForget"
 
 const withAuthorization = condition => Component => {
   class WithAuthorization extends React.Component {
@@ -49,6 +50,9 @@ const withAuthorization = condition => Component => {
           break
         case "signUp":
           FromComponent = SignUp
+          break
+        case "passwordForget":
+          FromComponent = PasswordForgetForm
           break
         default:
           break

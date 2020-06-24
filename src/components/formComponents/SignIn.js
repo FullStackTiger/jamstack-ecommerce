@@ -123,6 +123,7 @@ class SignIn extends React.Component {
                 <a
                   className="inline-block align-baseline font-bold text-sm"
                   href="#"
+                  onClick={() => toggleFormState("passwordForget")}
                 >
                   Forgot Password?
                 </a>
@@ -131,7 +132,7 @@ class SignIn extends React.Component {
                   href="#"
                   onClick={() => toggleFormState("signUp")}
                 >
-                 Go go Sign Up
+                  Go go Sign Up
                 </a>
               </div>
             </form>
