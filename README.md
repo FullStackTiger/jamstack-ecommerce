@@ -13,7 +13,7 @@ Out of the box, the site uses completely static data coming from a provider at `
 1. Clone the project
 
 ```sh
-$ git clone https://github.com/jamstack-cms/jamstack-ecommerce.git
+$ https://github.com/FullStackTiger/jamstack-ecommerce.git
 ```
 
 2. Install the dependencies:
@@ -26,7 +26,24 @@ $ yarn
 $ npm install
 ```
 
-3. Run the project
+3. Set the env files
+
+The .env or .env.development and .env.production files could look like the following then:
+
+example:
+
+```sh
+GATSBY_API_KEY=AIzaSyBtxZ3phPeXcsZsRTyyIXa7n33NtQ
+GATSBY_AUTH_DOMAIN=react-firebase-s2233d64f8.firebaseapp.com
+GATSBY_DATABASE_URL=https://react-firebase-s2233d64f8.firebaseio.com
+GATSBY_PROJECT_ID=react-firebase-s2233d64f8
+GATSBY_STORAGE_BUCKET=react-firebase-s2233d64f8.appspot.com
+GATSBY_MESSAGING_SENDER_ID=701928454501
+```
+
+Get an overview of Firebase, how to create a project, what kind of features Firebase offers, and how to navigate through the Firebase project dashboard in this visual tutorial for Firebase.
+
+4. Run the project
 
 ```sh
 $ gatsby develop
@@ -46,12 +63,10 @@ This project is styled using Tailwind. To learn more how this works, check out t
 
 The main files, components, and images you may want to change / modify are:
 
-__Logo__ - src/images/logo.png   
-__Buttons, Nav, Header__ - src/components   
-__Form components__ - src/components/formComponents   
-__Context (state)__ - src/context/mainContext.js   
-__Pages (admin, cart, checkout, index)__ - src/pages   
-__Templates (category view, single item view, inventory views)__ - src/templates   
+### Firebase Auth in the Admin panel
+
+1. Now it is implemented sign up, sign, in, sign out functions using Firebase Auth.
+
 
 ### How it works
 
@@ -122,13 +137,6 @@ await Promise.all(
 )
 ```
 
-### Updating with Auth / Admin panel
-
-1. Update __src/pages/admin.js__ with sign up, sign, in, sign out, and confirm sign in methods.
-
-2. Update __src/templates/ViewInventory.js__ with methods to interact with the actual inventory API.
-
-3. Update __src/components/formComponents/AddInventory.js__ with methods to add item to actual inventory API.
 
 ### Roadmap for V1
 
@@ -138,12 +146,4 @@ await Promise.all(
 - Themeing + dark mode
 - Better image support out of the box
 - Optional user account / profiles out of the box
-- Have an idea or a request? Submit [an issue](https://github.com/jamstack-cms/jamstack-ecommerce/issues) or [a pull request](https://github.com/jamstack-cms/jamstack-ecommerce/pulls)!
 
-### Other considerations
-
-#### Server-side processing of payments
-
-To see an example of how to process payments server-side with stripe, check out the [Lambda function in the snippets folder](https://github.com/jamstack-cms/jamstack-ecommerce/blob/master/snippets/lambda.js).
-
-Also, consider verifying totals by passing in an array of IDs into the function, calculating the total on the server, then comparing the totals to check and make sure they match.
